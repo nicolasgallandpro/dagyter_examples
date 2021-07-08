@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+
+  dagyter:
+    hostname: dagyter
+    image: nicogalland/dagyter
+    volumes:
+        - ./example-workspace:/workspace
+        - ./persistance/dagster:/dagster_db/
+        - ~/.ssh:/root/.ssh:ro
+    ports:
+      - "8501:8501"
+      - "8888:8888"
+      - "3000:3000"
+
+  menu:
+    hostname: menu
+    image: nicogalland/cross-app-menu
+    volumes:
+      - ./urls:/usr/share/nginx/html/environment_settings 
+    ports:
+      - "80:80"
+

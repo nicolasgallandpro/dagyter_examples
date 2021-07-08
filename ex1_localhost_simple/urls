@@ -1,0 +1,13 @@
+
+ENTRY_URL=http://localhost:80
+
+STREAMLIT_URL=http://localhost:8501
+STREAMLIT_LOGO=icons/streamlit.svg
+
+DAGSTER_URL=http://localhost:3000
+DAGSTER_LOGO=icons/dagster.png
+
+JUPYTER_URL=http://localhost:8888
+JUPYTER_LOGO=icons/jupyter.png
+
+

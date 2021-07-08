@@ -1,0 +1,29 @@
+{
+        email you@example.com
+}
+{$ENTRY_URL} {
+        reverse_proxy menu:80
+}
+{$DAGSTER_URL} {
+        reverse_proxy dagyter:3000
+	basicauth /* {
+                user **__HASHED_PASSWORD__**  
+        }
+}
+{$JUPYTER_URL} {
+        reverse_proxy dagyter:8888
+	basicauth /* {
+                user **__HASHED_PASSWORD__**  
+        }
+}
+{$STREAMLIT_URL} {
+        reverse_proxy dagyter:8501
+	basicauth /* {
+                user **__HASHED_PASSWORD__**  
+        }
+}
+{$SUPERSET_URL} {
+        reverse_proxy superset:8088
+}
+
+

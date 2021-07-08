@@ -1,0 +1,50 @@
+version: "3.7"
+
+services:
+
+  dagyter:
+    hostname: dagyter
+    image: nicogalland/dagyter
+    volumes:
+        - ./example-workspace:/workspace
+        - ./persistance/dagster:/dagster_db/
+        - ~/.ssh:/root/.ssh:ro
+
+  menu:
+    hostname: menu
+    image: nicogalland/cross-app-menu
+    volumes:
+      - ./urls:/usr/share/nginx/html/environment_settings 
+
+  db:
+    hostname : db
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: db
+      POSTGRES_USER: db
+      POSTGRES_DB: db
+    volumes:
+      - ./persistance/database:/var/lib/postgresql/data
+
+  superset:
+    hostname: superset
+    image: amancevice/superset
+    environment:
+      MAPBOX_API_KEY: ${MAPBOX_API_KEY}
+      SUPERSET_HOME: /etc/superset
+    volumes:
+      - ./superset/superset_config.py:/etc/superset/superset_config.py
+      - ./example-workspace/_TOOLS/superset_metadata:/var/lib/superset
+  
+  caddy:
+    image: caddy
+    env_file:
+      - urls
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+        - ./persistance/caddy:/data
+        - ./Caddyfile:/etc/caddy/Caddyfile
+
+

@@ -1,0 +1,16 @@
+
+ENTRY_URL=domain.com
+
+STREAMLIT_URL=https://streamlit.domain.com
+STREAMLIT_LOGO=icons/streamlit.svg
+
+DAGSTER_URL=https://dagster.domain.com
+DAGSTER_LOGO=icons/dagster.png
+
+JUPYTER_URL=https://jupyter.domain.com
+JUPYTER_LOGO=icons/jupyter.png
+
+SUPERSET_URL=https://superset.domain.com
+SUPERSET_LOGO=icons/superset.png
+SUPERSET_LINK=true
+
