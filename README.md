@@ -10,7 +10,7 @@ This example contains a Dagyter stack (Dagster, Jupyter with basics python/panda
 Clone this project, go to the directory ex1_localhost_simple, and execute the command :
 docker-compose up -d
 
-The 'urls' file contains the configuration of the right menu. See the [cross-app-menu repos](https://github.com/nicolasgallandpro/cross-app-menu) for more explanations.
+The 'urls' file contains the configuration of the right menu. See the [cross-app-menu repo](https://github.com/nicolasgallandpro/cross-app-menu) for more explanations.
 
 Docker will create a "persistance" directory to persist Dagster history and informations.
 
