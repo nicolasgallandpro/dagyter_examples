@@ -1,10 +1,10 @@
 # dagyter_examples
 
-This repo gives you 2 examples of Dagyter projects (https://github.com/nicolasgallandpro/dagyter)
+This repo gives you 2 examples of [Dagyter](https://github.com/nicolasgallandpro/dagyter) projects configurations
 
 ## ex1_localhost_simple
 ### Description
-This example contains a Dagyter stack (Dagster, Jupyter with basics python/pandas libs, and Streamlit) and un "Cross app menu" that allows you to have this 3 tools in the same tab (inside iframes) and let you switch between them with icons in a right menu.
+This example contains a Dagyter stack (Dagster, Jupyter with basics python/pandas libs, and Streamlit) and a "Cross app menu" that allows you to have this 3 tools in the same browser tab (inside iframes), and let you switch between them with a right menu.
 
 ### Installation
 Clone this project, go to the directory ex1_localhost_simple, and execute the command :
@@ -19,9 +19,9 @@ Docker will create a "persistance" directory to persist Dagster history and info
 ### Description
 Compared to example 1, example 2 has in addition :
 - Apache Superset configured with a postgres database
-- Caddy (reverse proxy). Caddy is pre-configured to manage domain and sub domain configuration, basic auth, and https)
+- Caddy (reverse proxy). Caddy is pre-configured to manage domain and sub domain configuration, basic auth, and https
 
 ### Installation and configuration
-Before Launching docker-compose, you have to configure urls in urls file and configure the Caddyfile with your logins, domains, ...
+Before Launching docker-compose, you have to configure domains and subdomains in urls file and configure the Caddyfile with your logins, domains, ...
 The 'urls' file is used as an env file for the caddy container, so you can use 'urls' variables in the Caddyfile.
 
