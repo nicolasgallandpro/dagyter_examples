@@ -2,7 +2,7 @@
 
 This repo gives you 2 examples of [Dagyter](https://github.com/nicolasgallandpro/dagyter) projects configurations
 
-## ex1_localhost_simple
+## Example 1 : ex1_localhost_simple
 ### Description
 This example contains a Dagyter stack (Dagster, Jupyter with basics python/pandas libs, and Streamlit) and a "Cross app menu" that allows you to have this 3 tools in the same browser tab (inside iframes), and let you switch between them with a right menu.
 
@@ -15,7 +15,7 @@ The 'urls' file contains the configuration of the right menu. See the [cross-app
 Docker will create a "persistance" directory to persist Dagster history and informations.
 
 
-## ex2_with_caddy_subdmains_auth_superset
+## Example 2 :  ex2_with_caddy_subdmains_auth_superset
 ### Description
 Compared to example 1, example 2 has in addition :
 - Apache Superset configured with a postgres database
