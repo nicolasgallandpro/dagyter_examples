@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+
+  dagyter:
+    hostname: dagyter
+    image: nicogalland/dagyter
+    volumes:
+        - ./example-workspace:/workspace
+        - ./persistance/dagster:/dagster_db/
+        - ~/.ssh:/root/.ssh:ro
+    ports:
+      - "8501:8501"
+      - "8888:8888"
+      - "3000:3000"
+
+
