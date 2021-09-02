@@ -7,8 +7,7 @@ services:
     image: nicogalland/dagyter
     volumes:
         - ./example-workspace:/workspace
-        - ./persistance/dagster:/dagster_db/
-        - ~/.ssh:/root/.ssh:ro
+        - ./persistance/dagster:/dagster_db/ 
     ports:
       - "8501:8501"
       - "8888:8888"
